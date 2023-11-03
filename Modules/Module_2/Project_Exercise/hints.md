@@ -18,7 +18,7 @@ You have a few options for investigation (other than trial and error):
 
 * The crudest approach is to add in `print` statements to your app to see what data it is sending/receiving. 
 * A fancier version of print statements would be [adding logging](https://www.sentinelone.com/blog/getting-started-quickly-with-flask-logging/)
-* To investigate without modifying any code, and without knowing what to look for ahead of time, try **debugging** your app. There are instructions on our [VS Code page](https://corndelwithsoftwire.github.io/DevOps-Course-FAQs/Tools/VSCode.html)
+* To investigate without modifying any code, and without knowing what to look for ahead of time, try **debugging** your app. There are instructions on our [VS Code page](https://faq.devops.corndel.com/Tools/VSCode.html)
 
 You should check the request you are sending looks correct and that you can find the data you expect in `response.json()`.
 
