@@ -16,7 +16,7 @@ Please add the following Github users as collaborators:
 * Josh Powell (`JoshAdamPowell`)
 * Andrew Huang (`AndrewYHuang`)
 * `CorndelExcellence`
-* `CorndelWithSoftwireDevOps`
+* `CorndelDevOps`
 
 If you're using GitLab instead, then please add the following and assign them "Maintainer" permissions:
 * Stephen Shaw (`aeone`)
@@ -24,7 +24,7 @@ If you're using GitLab instead, then please add the following and assign them "M
 * Jack Mead (`JackMead`)
 * Josh Powell (`JoshAdamPowell`)
 * Andrew Huang (`AndrewYHuang`)
-* `CorndelWithSoftwireDevOps`
+* `Corndel-DevOps`
 </details>
 
 ### I can't run the app
@@ -34,7 +34,7 @@ If you're using GitLab instead, then please add the following and assign them "M
 Issues setting up Python?
 </summary>
 
-Try following the guide to installing Python on [the Python Intro repository](https://github.com/CorndelWithSoftwire/DevOps-Course-Python-Intro)
+Try following the guide to installing Python on [the Python Intro repository](https://github.com/CorndelAdmin/DevOps-Course-Python-Intro)
 </details>
 
 <details markdown="1"><summary markdown="1">Issues setting up Poetry?

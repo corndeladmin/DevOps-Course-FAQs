@@ -15,7 +15,7 @@ It is largely a drop in replacement, but where the project exercise instructions
 Follow the Module 1 Project exercise instructions up to and including cloning the starter project.
 
 ```sh
-git clone https://github.com/CorndelWithSoftwire/DevOps-Course-Starter.git
+git clone https://github.com/CorndelAdmin/DevOps-Course-Starter.git
 cd DevOps-Course-Starter
 ```
 
