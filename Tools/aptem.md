@@ -13,7 +13,7 @@ Select that option, and the panel on the right hand side will show you relevant 
 
 ![Aptem Submission](../assets/images/aptem_submit_button.png)
 
-Click through that "Start Learning" button, and paste in your Pull-Request URL (which will look something like <https://github.com/corndeladmin/DevOps-Course-Starter/pull/1>).
+Click through that "Start Learning" button, and paste in your Pull-Request URL (which will look something like `https://github.com/yourname/DevOps-Course-Starter/pull/1`).
 
 </details>
 
