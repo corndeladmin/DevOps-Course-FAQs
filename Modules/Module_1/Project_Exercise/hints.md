@@ -13,7 +13,6 @@ Please add the following Github users as collaborators:
 * Stephen Shaw (`aeone`)
 * Alex Jones (`Jonesey13`)
 * Jack Mead (`JackMead`)
-* Josh Powell (`JoshAdamPowell`)
 * Andrew Huang (`AndrewYHuang`)
 * `CorndelExcellence`
 * `CorndelDevOps`
@@ -22,7 +21,6 @@ If you're using GitLab instead, then please add the following and assign them "M
 * Stephen Shaw (`aeone`)
 * Alex Jones (`Jonesey13`)
 * Jack Mead (`JackMead`)
-* Josh Powell (`JoshAdamPowell`)
 * Andrew Huang (`AndrewYHuang`)
 * `Corndel-DevOps`
 </details>
