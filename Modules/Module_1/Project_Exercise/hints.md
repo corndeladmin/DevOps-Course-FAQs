@@ -66,7 +66,7 @@ If the poetry folder is in your PATH and it is still not being picked up in a VS
 Issues with VSCode?
 </summary>
 
-See [our VSCode docs](../../../Tools/VSCode.md) for more information regarding setting it up generally, or [watch our video](https://nextcloud.softwire.com/index.php/s/xDNY7TDe4wxMg9s) for more advice on setting up VSCode explicitly for the project exercise project.
+See [our VSCode docs](../../../Tools/VSCode.md) for more information regarding setting it up generally, or [watch our video](https://corndel.sharepoint.com/:v:/g/Operations/ERI1LyCSHA9FvXIBeM2d1wUB0H5c6UBqrCSmDZdYdUZugA) for more advice on setting up VSCode explicitly for the project exercise project.
 </details>
 
 ### I can't get the index page to show items?
@@ -177,5 +177,5 @@ If you're having issues with that, it's worth checking:
 Where else can I look?
 </summary>
 
-[This linked video](https://nextcloud.softwire.com/index.php/s/xDNY7TDe4wxMg9s) contains a walk-through for the first project exercise including set up, so might be able to help you with any questions not covered by the above. Don't forget to also reach out to the trainers via Slack, Teams, Email or by booking a support call if you're seeing issues and we'll be more than happy to help!
+[This linked video](https://corndel.sharepoint.com/:v:/g/Operations/ERI1LyCSHA9FvXIBeM2d1wUB0H5c6UBqrCSmDZdYdUZugA) contains a walk-through for the first project exercise including set up, so might be able to help you with any questions not covered by the above. Don't forget to also reach out to the trainers via Slack, Teams, Email or by booking a support call if you're seeing issues and we'll be more than happy to help!
 </details>
