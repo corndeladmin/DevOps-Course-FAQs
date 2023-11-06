@@ -7,7 +7,7 @@ Visual Studio Code is a free Microsoft-supported IDE that is designed to work wi
 How to set up VSCode
 </summary>
 
-[Watch our video](https://nextcloud.softwire.com/index.php/s/zFGpDfyxS9keELT) for more advice on how to set up your VSCode instance.
+[Watch our video](https://corndel.sharepoint.com/:v:/g/Operations/EZ_raBhft-9Ag2cIBe0LZ3oB-Hf1bvZc34YPEsVxeriKcg?e=qPUndF) for more advice on how to set up your VSCode instance.
 </details>
 
 <details markdown="1">

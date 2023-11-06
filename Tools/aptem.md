@@ -7,7 +7,14 @@ Aptem is a training platform that we'll be using to help deliver the apprentices
 How do I submit my project in Aptem?
 </summary>
 
-[Watch our video](https://nextcloud.softwire.com/index.php/s/BNW5PbfQxA3cgfP) for a guide to submitting the project exercise within Aptem.
+Go into your Learning Plan on Aptem, and look for the relevant module (e.g. "Module 1 - Project Exercise").
+
+Select that option, and the panel on the right hand side will show you relevant information including the "Start Learning" option.
+
+![Aptem Submission](../assets/images/aptem_submit_button.png)
+
+Click through that "Start Learning" button, and paste in your Pull-Request URL (which will look something like `https://github.com/yourname/DevOps-Course-Starter/pull/1`).
+
 </details>
 
 <details markdown="1">
