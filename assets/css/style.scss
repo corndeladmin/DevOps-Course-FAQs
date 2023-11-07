@@ -19,3 +19,22 @@ summary {
     // Switch the icon to white
     filter: invert(1);
 }
+
+$corndel_primary_colour: #CE0058;
+
+.page-header {
+    background-color: $corndel_primary_colour;
+    background-image: none;
+}
+
+.main-content {
+    h1, h2, h3 {
+        color: $corndel_primary_colour;
+    }
+}
+
+.corndel-logo {
+    float: right;
+    width: 10%;
+    min-width: 50px;
+}
