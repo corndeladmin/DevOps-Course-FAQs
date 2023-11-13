@@ -13,6 +13,12 @@ summary {
 
 .nav-bar{
     text-align: left;
+    display: flex;
+
+    a {
+        flex-grow: 1;
+        margin: auto;
+    }
 }
 
 .home-icon {
