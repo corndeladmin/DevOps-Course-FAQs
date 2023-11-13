@@ -5,4 +5,4 @@ RUN gem install jekyll bundler
 WORKDIR /srv/jekyll
 COPY Gemfile Gemfile.lock ./
 RUN bundle install
-ENTRYPOINT ["bundle", "exec", "jekyll", "serve", "--host", "0.0.0.0", "--livereload"]
+ENTRYPOINT ["bundle", "exec", "jekyll", "serve", "--host", "0.0.0.0", "--livereload", "--force_polling"]
