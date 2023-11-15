@@ -18,16 +18,17 @@ provider "azurerm" {
 }
 
 data "azurerm_resource_group" "main" {
-    name = "Delivery_Resources"
+  name = "Delivery_Resources"
 }
 
 resource "azurerm_static_site" "example" {
   name                = "devops-faqs-static-web-app"
   resource_group_name = data.azurerm_resource_group.main.name
   location            = "West Europe"
-  sku_size = "Standard"
+  sku_size            = "Standard"
+  sku_tier            = "Standard"
   app_settings = {
-    "GITHUB_CLIENT_ID" = var.GITHUB_CLIENT_ID
+    "GITHUB_CLIENT_ID"     = var.GITHUB_CLIENT_ID
     "GITHUB_CLIENT_SECRET" = var.GITHUB_CLIENT_SECRET
   }
 }

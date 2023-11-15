@@ -1,0 +1,43 @@
+{
+    "routes": [
+        {
+            "route": "/login",
+            "rewrite": "/.auth/login/github"
+        },
+        {
+          "route": "/logout",
+          "redirect": "/.auth/logout"
+        },
+        {
+            "route": "/*",
+            "allowedRoles": ["learner","reader"]
+        }
+      ],
+      "navigationFallback": {
+        "rewrite": "index.html",
+        "exclude": ["/images/*.{png,jpg,gif}", "/css/*"]
+      },
+      "responseOverrides": {
+        "400": {
+          "rewrite": "/invalid-invitation-error.html"
+        },
+        "401": {
+          "redirect": "/login",
+          "statusCode": 302
+        },
+        "404": {
+          "rewrite": "/404.html"
+        }
+      },
+      "auth": {
+        "rolesSource": "/api/http_trigger",
+        "identityProviders": {
+          "github": {
+            "registration": {
+                "clientIdSettingName": "GITHUB_CLIENT_ID",
+                "clientSecretSettingName": "GITHUB_CLIENT_SECRET"
+            }
+          }
+       }
+    }
+}

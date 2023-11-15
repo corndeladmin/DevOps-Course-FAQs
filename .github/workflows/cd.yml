@@ -1,4 +1,4 @@
-name: Deploy the auth function
+name: Deploy the static web app
 on: [push]
 
 jobs:
@@ -9,31 +9,48 @@ jobs:
             ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
             ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
             ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
-            APP_NAME: staticfaq
+            APP_NAME: devops-faqs-static-web-app
             RESOURCE_GROUP: Delivery_Resources
+            FUNCTION_RESOURCE_GROUP: Delivery_Functions
             FUNCTION_NAME: static-web-auth-function
-            FUNCTION_ID: "/subscriptions/${{ secrets.ARM_SUBSCRIPTION_ID }}/resourceGroups/${RESOURCE_GROUPS}/providers/Microsoft.Web/sites/${FUNCTION_NAME}"
             TF_VAR_GITHUB_CLIENT_ID: ${{ secrets.OAUTH_CLIENT_ID }}
-            TF_VAR_GITHUB_SECRET_ID: ${{ secrets.OAUTH_CLIENT_SECRET }}
+            TF_VAR_GITHUB_CLIENT_SECRET: ${{ secrets.OAUTH_CLIENT_SECRET }}
         steps:
         - uses: actions/checkout@v3
+        
         - name: Initialise Terraform
           run: terraform init
           working-directory: infrastructure
         - name: Create the infrastructure
           run: terraform apply -auto-approve
           working-directory: infrastructure
+
         - name: Install static web app CLI
           run: npm install -g @azure/static-web-apps-cli
+        - name: Install credential helper
+          run: sudo apt install gnome-keyring pass
+        - name: Log in as service principal
+          run: az login --service-principal -u $ARM_CLIENT_ID -p $ARM_CLIENT_SECRET --tenant $ARM_TENANT_ID
+
         - name: Build the HTML
           run: docker compose up build_html
+        - name: Add the config file
+          run: sudo cp staticwebapp.config.json html_output/staticwebapp.config.json
+
         - name: Deploy the webapp itself
-          run: swa deploy .\html_output\ -n $APP_NAME -R $RESOURCE_GROUP --env production
-        #   working-directory: code
+          run: |
+            swa deploy html_output \
+            -n $APP_NAME \
+            -R $RESOURCE_GROUP \
+            --env production \
+            -C $ARM_CLIENT_ID \
+            -CS $ARM_CLIENT_SECRET \
+            -T $ARM_TENANT_ID \
+            -nu
         - name: Link the webapp to the auth function
           run: |
             az staticwebapp backends link \
-            -n $APP_NAME
-            --resource-group $RESOURCE_GROUP
-            --backend-resource-id $FUNCTION_ID
+            -n $APP_NAME \
+            --resource-group $RESOURCE_GROUP \
+            --backend-resource-id "/subscriptions/${ARM_SUBSCRIPTION_ID}/resourceGroups/${FUNCTION_RESOURCE_GROUP}/providers/Microsoft.Web/sites/${FUNCTION_NAME}" \
             --backend-region "Uk South"
