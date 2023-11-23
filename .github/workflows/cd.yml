@@ -41,16 +41,18 @@ jobs:
           run: |
             swa deploy html_output \
             -n $APP_NAME \
+            --api-location shared_api \
+            --api-language "python" --api-version "3.10" \
             -R $RESOURCE_GROUP \
             --env production \
             -C $ARM_CLIENT_ID \
             -CS $ARM_CLIENT_SECRET \
             -T $ARM_TENANT_ID \
             -nu
-        - name: Link the webapp to the auth function
-          run: |
-            az staticwebapp backends link \
-            -n $APP_NAME \
-            --resource-group $RESOURCE_GROUP \
-            --backend-resource-id "/subscriptions/${ARM_SUBSCRIPTION_ID}/resourceGroups/${FUNCTION_RESOURCE_GROUP}/providers/Microsoft.Web/sites/${FUNCTION_NAME}" \
-            --backend-region "Uk South"
+        # - name: Link the webapp to the auth function
+        #   run: |
+        #     az staticwebapp backends link \
+        #     -n $APP_NAME \
+        #     --resource-group $RESOURCE_GROUP \
+        #     --backend-resource-id "/subscriptions/${ARM_SUBSCRIPTION_ID}/resourceGroups/${FUNCTION_RESOURCE_GROUP}/providers/Microsoft.Web/sites/${FUNCTION_NAME}" \
+        #     --backend-region "Uk South"
